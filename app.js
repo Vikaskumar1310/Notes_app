@@ -1,3 +1,4 @@
+//importing modules
 const chalk = require('chalk');
 const yargs = require('yargs');
 const notes = require('./notes.js');
@@ -6,6 +7,7 @@ const notes = require('./notes.js');
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
+    //adding more option to argument
     builder: {
         title: {
             describe: 'Note title',
@@ -63,5 +65,5 @@ yargs.command({
         notes.readNote(argv.title);
     }
 });
-
+//form passing argument 
 yargs.parse();
